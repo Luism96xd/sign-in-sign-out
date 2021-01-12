@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <form>
+        <i class="material-icons md-48">face</i>
+        <h1>Sign In</h1>
+        <div class="container">
+            <input autofocus type="text" required>
+            <span data-placeholder="Username"></span>
+        </div>
+        
+        <div class="container">
+            <input id="password-input" type="password" name="current-password" required>
+            <span data-placeholder="Password"></span>
+            <button aria-label="Hide Password" id="toggle-password" class="material-icons md-inactive">visibility</button>
+        </div>
+        
+        </div>
+        <input class="btn" type="submit" id="sign-in-btn" value="Sign In"></button>
+        <div>
+            <p>Don't registred yet? <a href="sign_up.html">Sign Up</a></p>
+        </div>
+    </form>
+    <script>
+        const button = document.getElementById("sign-in-btn");
+        const togglePasswordButton = document.getElementById("toggle-password");
+        const passwordInput = document.getElementById("password-input");
+        togglePasswordButton.addEventListener("click", togglePassssord);
+        
+        function togglePassssord(){
+            if(passwordInput.type === "password"){
+                passwordInput.type = "text";
+                togglePasswordButton.innerHTML = "visibility_off";
+                togglePasswordButton.innerContent = "Hide Password";
+                togglePasswordButton.setAttribute('aria-label',"Hide Password");
+            }
+            else
+            {
+                passwordInput.type = "password";
+                togglePasswordButton.innerHTML = "visibility";
+                togglePasswordButton.innerContent = "Show Password";
+            togglePasswordButton.setAttribute('aria-label',"Show Password");
+            }
+        }
+    </script>
+</body>
+</html>
