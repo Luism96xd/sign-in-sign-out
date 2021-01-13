@@ -1,12 +1,14 @@
 body {
     background: rgb(10, 210, 255);
-    place-items: center;
     font-family: sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
 }
 * {
     text-decoration: none;
 }
-
 form{
     padding: 16px;
     display: flex;
@@ -59,6 +61,7 @@ form{
 
 .container input:invalid{
     border-radius: 8px 8px 0 0;
+    border-bottom: none;
 }
 .container input:focus + span::before,
 .container input:valid + span::before{
@@ -95,6 +98,19 @@ form{
 }
 .material-icons.md-inactive{
     color: #aaa;
+}
+footer{
+    background: #333;
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 48px;
+    padding: 16px 24px;
+}
+footer a{
+    color: #3498db;
 }
 .material-icons.md-18 { font-size: 18px; } 
 .material-icons.md-24 { font-size: 24px; } 
